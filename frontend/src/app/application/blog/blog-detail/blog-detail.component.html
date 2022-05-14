@@ -1,0 +1,41 @@
+<div
+  class=""
+  style="
+    background-image: url(assets/images/landingpage/banner-bg2.jpg);
+    height: 50vh;
+  "
+>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+
+  <div class="container text-white my-5">
+    <div class="row justify-content-center">
+      <div class="col-lg-9 col-md-6 text-center">
+        <h2 class="title">BLOG DETAIL PAGE</h2>
+        <p class="">We are Small Team of Creative People working together</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row mx-auto w-75">
+    <div class="col">
+      <div class="my-5">
+        <img src="{{ blogDetails.image }}" class="img-fluid" />
+        <div class="d-flex justify-content-between">
+          <p class="nav-link">{{ blogDetails.blogAuthor }}</p>
+          <div class="ml-auto">
+            <p class="nav-link">{{ blogDetails.blogDate }}</p>
+          </div>
+        </div>
+        <h2 class="title font-light">{{ blogDetails.heading }}</h2>
+        <p class="m-t-30 m-b-30">{{ blogDetails.subHeading }}</p>
+        <p class="m-t-30 m-b-30">{{ blogDetails.blogDetail }}</p>
+      </div>
+    </div>
+  </div>
+</div>

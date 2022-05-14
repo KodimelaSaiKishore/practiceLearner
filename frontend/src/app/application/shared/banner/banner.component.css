@@ -1,0 +1,14 @@
+.navbar-inverse{
+  background-color: #F7F7FF;
+  color: #000000;
+  box-shadow: rgba(49, 50, 51, 0.4) 0px 0px 15px 0px;
+}
+
+.navbar-const{
+  background-color: rgb(255, 235, 205, 0.05);
+  box-shadow: rgba(65, 68, 70, 0.6) 0px 0px 5px 0px;
+}
+
+.active{
+  color: #ffa500;
+}

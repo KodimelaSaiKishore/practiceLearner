@@ -1,0 +1,78 @@
+<br /><br /><br />
+
+<div class="container my-5">
+  <div class="bg-light">
+    <div class="card-body mx-auto" style="max-width: 1000px">
+      <h2 class="my-3">Write New Blog</h2>
+      <form [formGroup]="addBlogForm" (submit)="addToBlog()">
+        <div class="my-3" hidden>
+          <h5 for="" class="mx-3">Author</h5>
+          <input
+            name=""
+            class="form-control rounded-pill px-4"
+            type="text"
+            placeholder="Author name"
+            value="practice learner"
+            formControlName="blogAuthor"
+          />
+        </div>
+        <div class="my-3">
+          <h5 class="mx-3">Date</h5>
+          <input
+            type="text"
+            class="form-control rounded-pill px-4"
+            formControlName="blogDate"
+          />
+        </div>
+
+        <div class="my-3">
+          <h5 for="" class="mx-3">Heading</h5>
+          <input
+            name=""
+            class="form-control rounded-pill px-4"
+            placeholder="Blog Heading"
+            type="text"
+            formControlName="heading"
+          />
+        </div>
+
+        <div class="my-3">
+          <h5 for="" class="mx-3">Sub Heading</h5>
+          <input
+            name=""
+            class="form-control rounded-pill px-4"
+            placeholder="Sub Heading"
+            type="text"
+            formControlName="subHeading"
+          />
+        </div>
+
+        <div class="my-3">
+          <h5 for="" class="mx-3">Image</h5>
+          <input
+            class="form-control rounded-pill px-4"
+            placeholder="image URL"
+            type="text"
+            formControlName="image"
+          />
+        </div>
+
+        <div class="my-3">
+          <h5 for="" class="mx-3">Content</h5>
+          <textarea
+            class="form-control px-4"
+            placeholder="Enter you blog details here"
+            rows="10"
+            formControlName="blogDetail"
+          ></textarea>
+        </div>
+
+        <div class="my-3 text-end">
+          <button type="submit" class="btn btn-primary rounded-pill px-5">
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

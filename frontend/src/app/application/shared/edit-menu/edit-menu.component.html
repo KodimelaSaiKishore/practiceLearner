@@ -1,0 +1,18 @@
+<div
+  class="centered d-flex flex-column rounded-pill px-1 text-center"
+  [ngClass]="menuToggler == true ? 'bg-warning' : 'bg-transparent'"
+>
+  <button
+    class="btn fa my-2 rounded-pill p-2 btn-dark"
+    (click)="menuToggle()"
+    [ngClass]="menuToggler == true ? 'fa-arrow-up' : 'fa-bars'"
+  ></button>
+
+  <div class="d-flex flex-column" *ngIf="menuToggler">
+    <hr class="text-dark m-0" />
+    <button class="btn fa fa-plus my-2 rounded-pill p-2 btn-primary" routerLink="/admin/add-blog"></button>
+    <button
+      class="btn fa fa-pencil my-2 rounded-pill p-2 btn-secondary {{blogEditer}}"></button>
+    <button class="btn fa fa-trash my-2 rounded-pill p-2 btn-danger {{blogEditer}}"></button>
+  </div>
+</div>

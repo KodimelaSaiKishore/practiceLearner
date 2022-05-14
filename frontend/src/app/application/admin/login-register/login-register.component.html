@@ -1,0 +1,76 @@
+<br /><br /><br /><br />
+
+<div class="container my-5" style="height: 70vh">
+  <div class="bg-light">
+    <div class="card-body mx-auto" style="max-width: 400px">
+      <div>
+        <h4 class="card-title mt-3 text-center">{{ pageHeadingName[0] }}</h4>
+        <p class="text-center">{{ pageHeadingName[1] }}</p>
+      </div>
+      <p>
+        <button class="btn mx-auto w-100 btn-secondary rounded-pill">
+          <i class="fab fa-google mx-2"></i> {{ buttonName }} via Google
+        </button>
+      </p>
+      <p class="text-center">
+        <span class="bg-light">OR</span>
+      </p>
+      <form [formGroup]="loginFrom" (submit)="register()">
+        <div class="my-2" *ngIf="!loggedin">
+          <input
+            name=""
+            class="form-control rounded-pill px-4"
+            placeholder="Full name"
+            type="text"
+            formControlName="fullName"
+          />
+        </div>
+
+        <div class="my-2">
+          <input
+            name=""
+            class="form-control rounded-pill px-4"
+            placeholder="Email address"
+            type="email"
+            formControlName="emailAddress"
+          />
+        </div>
+
+        <div class="my-2">
+          <input
+            class="form-control rounded-pill px-4"
+            placeholder="Enter password"
+            type="password"
+            formControlName="password"
+          />
+        </div>
+
+        <div class="my-2" *ngIf="!loggedin">
+          <input
+            class="form-control rounded-pill px-4"
+            placeholder="Confirm password"
+            type="password"
+            formControlName="confirmPassword"
+          />
+        </div>
+
+        <div class="my-3 text-center">
+          <button type="submit" class="btn btn-primary rounded-pill px-3">
+            {{ buttonName }}
+          </button>
+        </div>
+
+        <p class="text-center m-0 p-0" *ngIf="!loggedin">
+          Have an account?
+          <a class="btn text-primary p-0 m-0" (click)="loginChange()">Log In</a>
+        </p>
+        <p class="text-center m-0 p-0" *ngIf="loggedin">
+          Don't have an account?
+          <a class="btn text-primary p-0 m-0" (click)="loginChange()"
+            >Register</a
+          >
+        </p>
+      </form>
+    </div>
+  </div>
+</div>

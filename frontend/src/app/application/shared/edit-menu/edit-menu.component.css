@@ -1,0 +1,7 @@
+.centered {
+  position: fixed;
+  right: 10px;
+  top: 50%;
+  transform: translate(-50%, 0);
+  color: white;
+}

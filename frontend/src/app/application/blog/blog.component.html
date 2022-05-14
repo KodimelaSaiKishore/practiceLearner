@@ -1,0 +1,83 @@
+<div
+  class="container-fluid text-light"
+  style="
+    background-image: url(assets/images/landingpage/banner-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 80vh;
+  "
+>
+  <br />
+  <br />
+  <br />
+  <br />
+  <div class="row justify-content-center py-5 w-7 mx-auto">
+    <div class="col-lg-9 col-md-6 text-center">
+      <h1 class="title my-4">Free Angular Blog</h1>
+      <h5>
+        Want a blog app with ng-bootstrap ? Here is the fully workable blog app
+        in which we are giving add post, edit post and delete post.
+      </h5>
+
+      <a href="#" class="btn btn-success w-5 my-5 px-5"> Start </a>
+    </div>
+  </div>
+</div>
+
+<div class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8 no-trans text-center">
+      <h1>Recent Blogs</h1>
+      <p>
+        You can relay on our amazing features list and also our customer
+        services will be great experience for you without doubt and in no-time
+      </p>
+    </div>
+
+    <div class="row justify-content-center px-5 my-5">
+      <div class="col-12 col-lg-3 mb-5">
+        <div class="justify-content-center w-100">
+          <h3>Whats New?</h3>
+          <ul>
+            <li>
+              last 2 newly added posts will be displayed here... along with
+              their dates.
+            </li>
+            <li>
+              last 2 newly added posts will be displayed here... along with
+              their dates.
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-7 ms-md-5">
+        <div class="row justify-content-center" *ngFor="let item of blogData">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-3">
+                <span class="text-dark">{{item.blogDate}}</span>
+                <p class="my-1">-by {{item.blogAuthor}}</p>
+              </div>
+              <div class="col-md-6">
+                <h5>
+                  {{item.heading}}
+                </h5>
+                <p>
+                  {{item.subHeading}}
+                </p>
+              </div>
+              <div class="col-md-3">
+                <a routerLink="/blogDetail/{{item.id}}">
+                  <span>Show Detail</span>
+                  <span>--</span>
+                </a>
+              </div>
+            </div>
+            <hr />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
